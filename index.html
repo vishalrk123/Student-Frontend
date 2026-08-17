@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Management System</h1>
+
+        <p class="subtitle">
+            HTML + JavaScript + Spring Boot REST API
+        </p>
+
+
+        <!-- =========================
+         ADD STUDENT
+    ========================== -->
+
+        <div class="card">
+
+            <h2>Add Student</h2>
+
+            <form id="studentForm">
+
+                <label>Name</label>
+
+                <input type="text" id="name" placeholder="Enter student name" required>
+
+                <label>Email</label>
+
+                <input type="email" id="email" placeholder="Enter student email" required>
+
+                <label>Course</label>
+
+                <input type="text" id="course" placeholder="Enter course" required>
+
+                <button type="submit">
+                    Add Student
+                </button>
+
+            </form>
+
+            <p id="message"></p>
+
+        </div>
+
+
+        <!-- =========================
+         UPDATE STUDENT
+    ========================== -->
+
+        <div class="card">
+
+            <h2>Update Student</h2>
+
+            <form id="updateForm">
+
+                <label>Student ID</label>
+
+                <input type="number" id="updateId" placeholder="Enter student ID" required>
+
+                <label>Name</label>
+
+                <input type="text" id="updateName" placeholder="Enter new name" required>
+
+                <label>Email</label>
+
+                <input type="email" id="updateEmail" placeholder="Enter new email" required>
+
+                <label>Course</label>
+
+                <input type="text" id="updateCourse" placeholder="Enter new course" required>
+
+                <button type="submit">
+                    Update Student
+                </button>
+
+            </form>
+
+            <p id="updateMessage"></p>
+
+        </div>
+
+
+        <!-- =========================
+         STUDENT LIST
+    ========================== -->
+
+        <div class="card">
+
+            <div class="header">
+
+                <h2>Student List</h2>
+
+                <button onclick="loadStudents()">
+                    Refresh
+                </button>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Course</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="studentTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
